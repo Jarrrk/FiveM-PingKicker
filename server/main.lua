@@ -7,9 +7,8 @@ AddEventHandler('pingKicker:check', function()
 end)
 
 RegisterServerEvent('pingKicker:kick')
-AddEventHandler('pingKicker:kick', function()
+AddEventHandler('pingKicker:kick', function(finalPing)
 	local _source = source
-	local finalPing = GetPlayerPing(_source)
 
 	DropPlayer(_source, "You have been kicked due to your high ping! (" .. finalPing .. "ms/" .. Config.limit .. "ms limit)")
 end)

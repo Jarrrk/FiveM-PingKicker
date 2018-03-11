@@ -24,7 +24,7 @@ Citizen.CreateThread(function()
 		end
 
 		if strikes >= Config.maxStrikes then
-			TriggerServerEvent('pingKicker:kick')
+			TriggerServerEvent('pingKicker:kick', playerPing)
 		end
 	end
 end)
